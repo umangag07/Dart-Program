@@ -123,21 +123,6 @@ class calculator {
 }
 
 int factorial(int n) => n == 0 ? 1 : n * factorial(n - 1);
-
-bool checkIsNum(dynamic input) {
-  // check input is empty or null
-  if (input == null || input.isEmpty()) {
-    return false;
-  }
-  // trying to parse into int or double
-
-  input = num.parse(input);
-  if (input) {
-    return true;
-  }
-  return false;
-}
-
 void Calculator() {
   var c = calculator();
   int wrongInput =
@@ -441,8 +426,8 @@ void currency_converter() {
       print(country_list);
       stdout.write("\nFrom: ");
       from = stdin.readLineSync();
-      print(country_code);
       if (country_list.contains(from)) {
+        print(country_code);
         stdout.write("\nType the code to convert ");
         c_list = conversion[from]!.keys.toList();
         print(c_list);
