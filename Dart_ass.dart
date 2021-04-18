@@ -495,6 +495,6 @@ void main() {
     choice = stdin.readLineSync();
   }
   if (wrongInput == 2) {
-    print("\nYou have given wrong choice twice.So, program has ended.\n");
+    print("\nYou have given wrong choice thrice.So, program has ended.\n");
   }
 }
