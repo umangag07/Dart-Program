@@ -25,7 +25,8 @@
 
 ```
  
-### 2. Calculator menu (If input was 1)- (Program will return automatically to the main menu after 3 wrong inputs).
+### 2. Calculator menu (If input was 1) 
+ 
 ```
 *******************************************
 You have selected: 1 TO USE CALCULATOR
@@ -50,6 +51,7 @@ Enter
 
  Your Input:
 ```
+  #### Program will return automatically to the main menu after 3 wrong inputs.
 
 ### 3. Currecny Converter (If input was 2) 
 ```
