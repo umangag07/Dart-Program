@@ -13,7 +13,7 @@
  
  # Programs Menus 
  
- ### 1. Main menu - (Program will stop automatically after 3 wrong inputs.)
+ ### 1. Main menu  
  ```
  ***********************************************
  Enter
@@ -24,6 +24,7 @@
  Your Input:
 
 ```
+ #### Program will stop automatically after 3 wrong inputs.
  
 ### 2. Calculator menu (If input was 1) 
  
