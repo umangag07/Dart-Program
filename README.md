@@ -53,22 +53,26 @@ Enter
 
 ### 3. Currecny Converter (If input was 2) 
 ```
-Enter amount to be converted: 3456
+***********************************************
+You have selected: 2 TO USE CURRENCY CONVERTER
+***********************************************
+
+ Enter amount to be converted: 40 
 
 Type the country to convert from:
-[usa, russia, china, germany/france, united_kingdom, japan, israel, india,  brazil, canada, australia]
+[Usa, Russia, China, Germany, France, United kingdom, Japan, Israel, India, Brazil, Canada, Australia]
 
-From: usa
-{Usa: US, Russia: RU, China: CH, Germany: GE, United Kingdom: UK, France: FR, Japan: JA, Israel: IS, India: IS, Brazil: BR, Canada: CA, Australia: AS}
+From: Israel
+{US: Usa, RU: Russia, CH: China, GE: Germany, UK: United Kingdom, FR: France, JA: Japan, IS: Israel, IN: India, BR: Brazil, CA: Canada, AU: Australia}
 
-Type the code to convert [RU, CH, GE, UK, FR, JA, IS, IN, BR, CA, AU]
+Type the code to convert [US, RU, GE, CH, FR, UK, JA, IN, BR, CA, AU]
 
-To: IN
+To: AU
+Amount in Israel: 40.0
+Equal Amout converted in Australia will be: 15.760000000000002
 
-Converted Amout is: 257333.75999999998
-
-1: Exit currency_converter
 0: Continue converting
+1: Exit currency_converter
 your Input:
 
 ```
