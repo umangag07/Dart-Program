@@ -256,22 +256,22 @@ void Calculator() {
 void currency_converter() {
   dynamic Amount, from, country_list, c_list, rightInput, stop = 0;
   var country_code = {
-    "Usa": 'US',
-    "Russia": 'RU',
-    "China": 'CH',
-    "Germany": "GE",
-    "United Kingdom": 'UK',
-    "France": "FR",
-    "Japan": "JA",
-    "Israel": "IS",
-    "India": 'IS',
-    "Brazil": 'BR',
-    "Canada": 'CA',
-    "Australia": 'AS'
+    'US': "Usa",
+    'RU': "Russia",
+    'CH': "China",
+    "GE": "Germany",
+    'UK': "United Kingdom",
+    "FR": "France",
+    "JA": "Japan",
+    "IS": "Israel",
+    'IN': "India",
+    'BR': "Brazil",
+    'CA': "Canada",
+    'AU': "Australia"
   };
   var to;
   var conversion = {
-    "usa": {
+    "Usa": {
       "RU": 75.80,
       "CH": 6.53,
       "GE": 0.83,
@@ -284,7 +284,7 @@ void currency_converter() {
       "CA": 1.25,
       "AU": 1.29
     },
-    "russia": {
+    "Russia": {
       "US": 0.013,
       "CH": 0.860,
       "GE": 0.011,
@@ -297,7 +297,7 @@ void currency_converter() {
       "CA": 0.016,
       "AU": 0.017
     },
-    "china": {
+    "China": {
       "US": 0.153,
       "RU": 11.61,
       "GE": 0.128,
@@ -310,7 +310,7 @@ void currency_converter() {
       "CA": 0.191,
       "AU": 0.198
     },
-    "germany/france": {
+    "Germany": {
       "US": 1.198,
       "CH": 7.812,
       "UK": 0.866,
@@ -321,7 +321,18 @@ void currency_converter() {
       "CA": 1.498,
       "AU": 1.548
     },
-    "united_kingdom": {
+    "France": {
+      "US": 1.198,
+      "CH": 7.812,
+      "UK": 0.866,
+      "JA": 130.32,
+      "IS": 3.92,
+      "IN": 89.32,
+      "BR": 6.702,
+      "CA": 1.498,
+      "AU": 1.548
+    },
+    "United kingdom": {
       "US": 1.382,
       "RU": 104.71,
       "GE": 1.154,
@@ -334,7 +345,7 @@ void currency_converter() {
       "CA": 1.729,
       "AU": 1.787
     },
-    "japan": {
+    "Japan": {
       "US": 0.009,
       "RU": 0.696,
       "GE": 0.0076,
@@ -347,7 +358,7 @@ void currency_converter() {
       "CA": 0.114,
       "AU": 0.118
     },
-    "israel": {
+    "Israel": {
       "US": 0.304,
       "RU": 23.090,
       "GE": 0.254,
@@ -360,7 +371,7 @@ void currency_converter() {
       "CA": 0.381,
       "AU": 0.394
     },
-    "india": {
+    "India": {
       "US": 0.013411,
       "RU": 1.105,
       "GE": 0.011,
@@ -373,7 +384,7 @@ void currency_converter() {
       "CA": 0.016,
       "AU": 0.017
     },
-    " brazil": {
+    "Brazil": {
       "US": 0.179,
       "RU": 13.56,
       "GE": 0.149,
@@ -386,7 +397,7 @@ void currency_converter() {
       "CA": 0.223,
       "AU": 0.23
     },
-    "canada": {
+    "Canada": {
       "US": 0.799,
       "RU": 60.57,
       "GE": 0.667,
@@ -399,7 +410,7 @@ void currency_converter() {
       "IN": 59.60,
       "AU": 1.03
     },
-    "australia": {
+    "Australia": {
       "US": 0.773,
       "RU": 58.58,
       "GE": 0.645,
@@ -436,7 +447,11 @@ void currency_converter() {
         stdout.write("\nTo: ");
         to = stdin.readLineSync();
         if (c_list.contains(to)) {
-          stdout.write("\nConverted Amout is: ");
+          stdout.write("Amount in " + from + ": ");
+          stdout.write(Amount);
+          stdout.write("\nEqual Amout converted in ");
+          stdout.write(country_code[to]);
+          stdout.write(" will be: ");
           print(Amount * conversion[from]![to]);
         } else {
           print("\nWrong input\n");
@@ -448,7 +463,7 @@ void currency_converter() {
       print("\nEnter numbers only for amount!!\n");
     }
     stdout.write(
-        "\n1: Exit currency_converter \n0: Continue converting \nyour Input:");
+        " \n0: Continue converting \n1: Exit currency_converter  \nyour Input:");
     stop = stdin.readLineSync();
     if (stop == "0") {
       stop = 0;
