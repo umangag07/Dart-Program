@@ -242,12 +242,14 @@ void Calculator() {
       default:
         {
           wrongInput = wrongInput + 1;
-          print("Input correct choice only!!");
+          print("\nInput correct choice only!!");
         }
     }
-    print(
-        "\n\nEnter \n +:For Addition \n -: For Subtraction \n x: For Multiplication \n \\: For Division \n %: For Modulo \n !: For Factorial \n s: For sqareRoot(√) \n ^: for Power ^ \n ln: For natural log \n sin: For sin \n cos: For cos \n tan: For tan \n asin: For sin inverse \n acos: For cos inverse \n atan: For tan inverse \n 0:To exit calculator \n \n Your Input: ");
-    choice = stdin.readLineSync();
+    if (wrongInput <= 2) {
+      stdout.write(
+          "\n\nEnter \n +:For Addition \n -: For Subtraction \n x: For Multiplication \n \\: For Division \n %: For Modulo \n !: For Factorial \n s: For sqareRoot(√) \n ^: for Power ^ \n ln: For natural log \n sin: For sin \n cos: For cos \n tan: For tan \n asin: For sin inverse \n acos: For cos inverse \n atan: For tan inverse \n 0:To exit calculator \n \n Your Input: ");
+      choice = stdin.readLineSync();
+    }
   }
 }
 
@@ -487,12 +489,14 @@ void main() {
       default:
         {
           print("\n Wrong choice:1 or 2 only!! \n");
-          wrongInput++;
+          wrongInput = wrongInput + 1;
         }
     }
-    stdout.write(
-        '*********************************************** \n Enter\n 1: To use calculator \n 2: To use currency converter\n 0:To exit \n*********************************************** \n Your Input:  ');
-    choice = stdin.readLineSync();
+    if (wrongInput <= 2) {
+      stdout.write(
+          '*********************************************** \n Enter\n 1: To use calculator \n 2: To use currency converter\n 0:To exit \n*********************************************** \n Your Input:  ');
+      choice = stdin.readLineSync();
+    }
   }
   if (wrongInput == 2) {
     print("\nYou have given wrong choice thrice.So, program has ended.\n");
